@@ -9,19 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.38.0",
+    "ai": "^2.2.15",
+    "ai-stream-experimental": "2.2.2",
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1",
+    "langchain": "^0.0.156",
+    "next": "latest",
+    "pdf-parse": "^1.1.1",
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "encoding": "^0.1.13",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "tsx": "^3.13.0",
+    "typescript": "latest"
   }
 }
