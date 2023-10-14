@@ -1,4 +1,4 @@
-import { callChain } from "@/lib/getChat";
+import { callChain } from "@/unused/getChat";
 import { NextRequest, NextResponse } from "next/server";
 import {
   Message as VercelChatMessage,
