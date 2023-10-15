@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare:data": "tsx -r dotenv/config ./scripts/supabase-prepare-docs.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0",

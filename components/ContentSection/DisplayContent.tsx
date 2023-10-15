@@ -30,7 +30,7 @@ const DisplayContent = ({ messages, error }: any) => {
             mess.role === "user"
               ? "bg-transparent"
               : "bg-lowlight dark:bg-primary"
-          } text-secondar dark:text-lowlight px-3 py-2 rounded-md my-2 w-full`}
+          } text-secondar dark:text-lowlight px-3 py-4 rounded-md my-2 w-full`}
         >
           {mess.role === "user" ? (
             <div className="flex items-start gap-x-3">
