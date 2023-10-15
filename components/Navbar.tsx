@@ -29,9 +29,8 @@ const Navbar = () => {
       </div>
       <div className="flex items-center">
         <a
-          href="https://github.com/Aaryan6/AyurvedaGPT-react"
+          href="https://github.com/Aaryan6"
           target="_blank"
-          rel="noopener noreferrer"
           className="text-white mr-6"
         >
           <Github className="text-xl sm:text-2xl text-black dark:text-[#fff]" />
