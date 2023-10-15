@@ -4,7 +4,7 @@ import DisplayContent from "./ContentSection/DisplayContent";
 import { useChat } from "ai/react";
 
 const ChatSection = () => {
-  const { messages, input, handleInputChange, handleSubmit, isLoading, data } =
+  const { messages, input, handleInputChange, handleSubmit, isLoading, error } =
     useChat({});
 
   return (
@@ -21,7 +21,7 @@ const ChatSection = () => {
           </div>
         )}
         <div className={`flex flex-col justify-end w-full`}>
-          <DisplayContent messages={messages} isLoading={isLoading} />
+          <DisplayContent messages={messages} error={error} />
           <SearchBox
             isLoading={isLoading}
             input={input}

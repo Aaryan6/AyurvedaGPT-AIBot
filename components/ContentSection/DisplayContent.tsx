@@ -6,7 +6,7 @@ interface DisplayContentProps {
   loading: boolean;
 }
 
-const DisplayContent = ({ messages, isLoading }: any) => {
+const DisplayContent = ({ messages, error }: any) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -22,6 +22,7 @@ const DisplayContent = ({ messages, isLoading }: any) => {
       } overflow-y-scroll scrolldiv`}
       ref={containerRef}
     >
+      <p className="text-red-400">{error}</p>
       {messages?.map((mess: any) => (
         <div
           key={mess.id}
