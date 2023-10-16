@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.38.0",
+    "@vercel/analytics": "^1.1.1",
     "ai": "^2.2.15",
     "dotenv": "^16.3.1",
     "langchain": "^0.0.156",
