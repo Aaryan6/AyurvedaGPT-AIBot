@@ -13,6 +13,19 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
     apple: "/ayurvedalogo.png",
+    shortcut: "/ayurvedalogo.png",
+  },
+  openGraph: {
+    type: "website",
+    url: "https://ayurvedagpt.vercel.app",
+    title: sitedata.title,
+    description: sitedata.description,
+    siteName: sitedata.title,
+    images: [
+      {
+        url: "/ayurvedalogo.png",
+      },
+    ],
   },
 };
 
