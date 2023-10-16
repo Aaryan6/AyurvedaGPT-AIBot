@@ -1,15 +1,16 @@
 "use client";
-import { Github, Sun, Moon } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Github } from "lucide-react";
 import Image from "next/image";
 
+import { Outfit } from "next/font/google";
+import { ThemeToggle } from "./themeToggle";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
 const Navbar = () => {
-  const { theme, setTheme } = useTheme();
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-
   return (
     <nav className="flex items-center justify-between p-4 sm:p-6 px-4 sm:px-10 max-w-8xl mx-auto w-full">
       <div className="flex items-center">
@@ -22,7 +23,9 @@ const Navbar = () => {
             className="mr-2 -mt-1"
           />
 
-          <span className="logo text-black dark:text-emerald-50 font-semibold text-base sm:text-xl">
+          <span
+            className={`${outfit.className} logo text-black dark:text-emerald-50 font-semibold text-base sm:text-xl`}
+          >
             AyurvedaGPT
           </span>
         </div>
@@ -35,21 +38,7 @@ const Navbar = () => {
         >
           <Github className="text-xl sm:text-2xl text-black dark:text-[#fff]" />
         </a>
-        {theme === "dark" ? (
-          <button
-            className="text-xl sm:text-2xl text-black dark:text-[#fff]"
-            onClick={toggleTheme}
-          >
-            <Sun />
-          </button>
-        ) : (
-          <button
-            className="text-xl sm:text-2xl text-black dark:text-[#fff]"
-            onClick={toggleTheme}
-          >
-            <Moon />
-          </button>
-        )}
+        <ThemeToggle />
       </div>
     </nav>
   );

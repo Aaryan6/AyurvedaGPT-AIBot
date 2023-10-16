@@ -4,7 +4,6 @@ export function scrollToBottom(containerRef: React.RefObject<HTMLElement>) {
     if (lastMessage) {
       const scrollOptions: ScrollIntoViewOptions = {
         behavior: "smooth",
-        block: "end",
       };
       lastMessage.scrollIntoView(scrollOptions);
     }

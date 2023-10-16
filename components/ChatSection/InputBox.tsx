@@ -1,8 +1,13 @@
-import axios from "axios";
-import { SendHorizontal, Sparkle, X } from "lucide-react";
-import { useState } from "react";
+import { SendHorizontal, Sparkle } from "lucide-react";
 
-const SearchBox = ({
+interface InputBoxProps {
+  isLoading: boolean;
+  input: string;
+  handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+  handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const InputBox = ({
   isLoading,
   input,
   handleSubmit,
@@ -25,7 +30,10 @@ const SearchBox = ({
           type="submit"
           className="grid place-items-center bg-light dark:bg-secondary text-secondary dark:text-light w-10 h-10 rounded-md"
         >
-          <SendHorizontal className={isLoading && "animate-pulse"} size={20} />
+          <SendHorizontal
+            className={isLoading ? "animate-pulse" : ""}
+            size={20}
+          />
         </button>
       ) : (
         <button
@@ -39,4 +47,4 @@ const SearchBox = ({
   );
 };
 
-export default SearchBox;
+export default InputBox;
