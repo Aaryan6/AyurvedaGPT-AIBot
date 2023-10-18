@@ -15,7 +15,6 @@ const gptModel = new ChatOpenAI({
   modelName: "gpt-3.5-turbo",
   openAIApiKey: process.env.OPENAI_API_KEY,
   verbose: true,
-  maxTokens: 2000,
 });
 
 export async function callChain({ question, chatHistory }: any) {
@@ -37,7 +36,6 @@ export async function callChain({ question, chatHistory }: any) {
       openAIApiKey: process.env.OPENAI_API_KEY,
       verbose: true,
       streaming: true,
-      maxTokens: 2000,
     });
 
     const client = createClient(url, privateKey);
