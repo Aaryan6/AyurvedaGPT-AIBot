@@ -3,7 +3,7 @@ import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 
 export async function getChunkedDocsFromPDF() {
   try {
-    const loader = new PDFLoader("docs/the_ayurveda_encyclopedia.pdf");
+    const loader = new PDFLoader(process.env.NEXT_PUBLIC_PDF_LOC as string);
     const docs = await loader.load();
 
     // From the docs https://www.pinecone.io/learn/chunking-strategies/
