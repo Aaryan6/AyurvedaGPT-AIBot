@@ -32,19 +32,19 @@ const Chats = ({ messages, error }: ChatsProps) => {
             mess.role === "user"
               ? "bg-transparent"
               : "bg-lowlight dark:bg-primary"
-          } text-secondar dark:text-lowlight px-3 py-3 rounded-md my-1 w-full`}
+          } text-secondary dark:text-lowlight px-3 py-3 rounded-md my-1 w-full`}
         >
           {mess.role === "user" ? (
-            <div className="flex items-start gap-x-3">
+            <div className="flex place-content-start gap-x-3">
               <User />
-              <p className="pt-2 text-gray-900 dark:text-gray-300">
+              <p className="pt-2 flex-1 text-gray-900 dark:text-gray-300">
                 {mess.content}
               </p>
             </div>
           ) : (
-            <div className="flex items-start gap-x-3 py-2">
+            <div className="flex items-start gap-x-3 px-1 py-2">
               <Robot />
-              <p className="whitespace-pre-wrap leading-relaxed text-gray-900 dark:text-gray-300 pt-2 flex-1">
+              <p className="whitespace-pre-wrap leading-relaxed text-gray-900 dark:text-gray-300 flex-1 pt-1.5">
                 {mess.content.trimStart()}
               </p>
             </div>

@@ -18,9 +18,9 @@ const Navbar = () => {
           <Image
             src="/ayurvedalogo.png"
             alt=""
-            width={40}
-            height={40}
-            className="mr-2 -mt-1"
+            width={351}
+            height={351}
+            className="w-10 mr-2 h-auto aspect-square"
           />
 
           <span
